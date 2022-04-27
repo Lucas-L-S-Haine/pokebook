@@ -1,8 +1,8 @@
 import React from 'react';
 import { catchPokemon } from '../services/pokemon';
 
-class Pokemon extends React.Component<{ species: string | undefined }, { pokemon: any }> {
-  constructor(props: { species: string | undefined }) {
+class Pokemon extends React.Component<{ species: string }, { pokemon: any }> {
+  constructor(props: { species: string }) {
     super(props);
     this.state = {
       pokemon: {},
