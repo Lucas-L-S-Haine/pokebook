@@ -1,9 +1,19 @@
 import React from 'react';
 import { catchPokemon } from '../services/pokemon';
 
-class Pokemon extends React.Component<{ species: string }, { pokemon: any, loading: boolean }> {
-  constructor(props: { species: string }) {
 // pokemon data fetched from https://pokeapi.co/
+
+export interface PokemonProps {
+  species: string;
+}
+
+export interface PokemonState {
+  pokemon: any;
+  loading: boolean;
+}
+
+class Pokemon extends React.Component<PokemonProps, PokemonState> {
+  constructor(props: PokemonProps) {
     super(props);
     this.state = {
       pokemon: {},
