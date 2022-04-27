@@ -3,6 +3,7 @@ import { catchPokemon } from '../services/pokemon';
 
 class Pokemon extends React.Component<{ species: string }, { pokemon: any, loading: boolean }> {
   constructor(props: { species: string }) {
+// pokemon data fetched from https://pokeapi.co/
     super(props);
     this.state = {
       pokemon: {},
