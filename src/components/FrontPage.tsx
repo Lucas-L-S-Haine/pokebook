@@ -1,8 +1,8 @@
-import React from 'react';
+import { Component } from 'react';
 import Pokemon from './Pokemon';
 import './FrontPage.css';
 
-class FrontPage extends React.Component {
+class FrontPage extends Component {
   render() {
     return(
       <>

@@ -1,4 +1,4 @@
-import React from 'react';
+import { Component } from 'react';
 import { catchPokemon } from '../services/pokemon';
 
 // pokemon data fetched from https://pokeapi.co/
@@ -12,7 +12,7 @@ export interface PokemonState {
   loading: boolean;
 }
 
-class Pokemon extends React.Component<PokemonProps, PokemonState> {
+class Pokemon extends Component<PokemonProps, PokemonState> {
   constructor(props: PokemonProps) {
     super(props);
     this.state = {
