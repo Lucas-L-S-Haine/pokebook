@@ -1,11 +1,12 @@
 import React from 'react';
 import { catchPokemon } from '../services/pokemon';
 
-class Pokemon extends React.Component<{ species: string }, { pokemon: any }> {
+class Pokemon extends React.Component<{ species: string }, { pokemon: any, loading: boolean }> {
   constructor(props: { species: string }) {
     super(props);
     this.state = {
       pokemon: {},
+      loading: true,
     };
   }
 
@@ -15,13 +16,20 @@ class Pokemon extends React.Component<{ species: string }, { pokemon: any }> {
   }
 
   async getPokemonBySpecies(species: string) {
-    const pokemon = await catchPokemon(species);
-    this.setState({ pokemon });
+    this.setState({ loading: true });
+    await catchPokemon(species)
+      .then((pokemon) => this.setState({ pokemon, loading: false }));
   }
 
   render() {
-    const { pokemon } = this.state;
-    return(<span>{ pokemon.name }</span>);
+    const { pokemon, loading } = this.state;
+    if (loading) return 'loading...'
+    return(
+      <div>
+        <span>{ pokemon.name }</span>
+        <img src={ pokemon.sprites.front_default } alt={ pokemon.name } />
+      </div>
+    );
   }
 }
 
