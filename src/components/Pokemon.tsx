@@ -14,7 +14,7 @@ class Pokemon extends React.Component<{ species: string | undefined }, { pokemon
     this.getPokemonBySpecies(species);
   }
 
-  async getPokemonBySpecies(species: string = 'ditto') {
+  async getPokemonBySpecies(species: string) {
     const pokemon = await catchPokemon(species);
     this.setState({ pokemon });
   }
