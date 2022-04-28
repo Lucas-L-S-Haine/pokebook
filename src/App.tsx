@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import FrontPage from './components/FrontPage';
+import FrontPage from './pages/FrontPage';
 import './App.css';
 
 function App() {
