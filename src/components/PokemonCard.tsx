@@ -55,7 +55,7 @@ class PokemonCard extends Component<PokemonCardProps, PokemonCardState> {
     if (loading) return 'loading...'
     return(
       <div className="pokemon-card">
-        <div>
+        <div id="pokemon-card-title">
           <div id="pokemon-card-id">{ pokemon.id }</div>
           <div id="pokemon-card-name">{ pokemon.name }</div>
         </div>
@@ -75,7 +75,7 @@ class PokemonCard extends Component<PokemonCardProps, PokemonCardState> {
                 <div className="pokemon-card-type-value" key={ slot }>{ type.name }</div>
             )
           }
-        </div>
+          </div>
         <div>
           {
             pokemon.stats.map(({ stat, base_stat }: Stat) => (
