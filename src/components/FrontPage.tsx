@@ -4,7 +4,7 @@ import './FrontPage.css';
 
 class FrontPage extends Component {
   render() {
-    const indexList = Array(10).fill(0).map((_, index) => index + 1);
+    const indexList = Array(12).fill(0).map((_, index) => index + 1);
     return(
       <div className="FrontPage">
         {
