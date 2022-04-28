@@ -6,11 +6,11 @@ class FrontPage extends Component {
   render() {
     const indexList = Array(12).fill(0).map((_, index) => index + 1);
     return(
-      <div className="FrontPage">
+      <main className="FrontPage">
         {
           indexList.map((dexId) => <PokemonCard key={ dexId } pokemonId={ dexId } />)
         }
-      </div>
+      </main>
     )
   }
 }
