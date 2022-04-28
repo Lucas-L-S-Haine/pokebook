@@ -5,6 +5,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   width: 12em;
+  border-radius: 7px;
 }
 
 #pokemon-card-id {
@@ -16,25 +17,22 @@
 }
 
 #pokemon-card-type {
-  display: grid;
-  grid-template-columns: 98% 49% 49%;
-  gap: 2%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
 #pokemon-card-type-label {
   color: red;
+  background-color: cyan;
 }
 
-#pokemon-card-type1 {
+.pokemon-card-type-value {
   background-color: green;
   margin: 2px;
-}
-
-#pokemon-card-type2 {
-  background-color: green;
-  margin: 2px;
+  display: inline-block;
 }
 
 #pokemon-card-image {
