@@ -1,13 +1,16 @@
 import { Component } from 'react';
-import Pokemon from './Pokemon';
+import PokemonCard from './PokemonCard';
 import './FrontPage.css';
 
 class FrontPage extends Component {
   render() {
+    const indexList = Array(10).fill(0).map((_, index) => index + 1);
     return(
-      <>
-        <Pokemon species="abra" />
-      </>
+      <div className="FrontPage">
+        {
+          indexList.map((dexId) => <PokemonCard key={ dexId } pokemonId={ dexId } />)
+        }
+      </div>
     )
   }
 }
