@@ -72,7 +72,7 @@ class PokemonCard extends Component<PokemonCardProps, PokemonCardState> {
           {
             pokemon.types.map(
               ({ slot, type }: PokemonType) =>
-                <span id={`pokemon-card-type${slot}`} key={ slot }>{ type.name }</span>
+                <div className="pokemon-card-type-value" key={ slot }>{ type.name }</div>
             )
           }
         </div>
